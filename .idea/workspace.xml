@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb34f9d7-12e2-4577-aa38-6e40eb2d1628" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Invoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Invoice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestInvoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestInvoice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,17 +68,29 @@
       <option name="presentableId" value="Default" />
       <updated>1583765550050</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated TestInvoice.py to allow for markup and tax functions.&#10;&#10;Added test case for totalTax function">
+      <created>1584554782150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584554782150</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated TestInvoice.py to allow for markup and tax functions.&#10;&#10;Added test case for totalTax function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated TestInvoice.py to allow for markup and tax functions.&#10;&#10;Added test case for totalTax function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583767925598">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1583767925598" />
-    <state x="344" y="52" key="CommitChangelistDialog2" timestamp="1584554671584">
+    <state x="551" y="0" key="CommitChangelistDialog2" timestamp="1584554781933">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584554671584" />
+    <state x="551" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584554781933" />
     <state width="1419" height="269" key="GridCell.Tab.0.bottom" timestamp="1584553223831">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -101,5 +111,9 @@
     </state>
     <state width="1419" height="269" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584553223830" />
     <state width="679" height="230" key="GridCell.Tab.0.right/40.23.1400.877@40.23.1400.877" timestamp="1583769710892" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584554786815">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584554786815" />
   </component>
 </project>

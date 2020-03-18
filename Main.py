@@ -9,9 +9,8 @@ while True:
     qnt = Invoice().inputNumber("Please enter quantity of product : ")
     discount = Invoice().inputNumber("Discount percent (%) : ")
     markup = Invoice().inputNumber("Markup percent (%) : ")                 #test line
-    tax = Invoice().inputNumber("Tax percent (%) : ")                       #test line
     repeat = Invoice().inputAnswer("Another product? (y,n) : ")
-    result = Invoice().addProduct(qnt, unit_price, discount, markup, tax)        #modified lines with updated parameters
+    result = Invoice().addProduct(qnt, unit_price, discount, markup)        #modified lines with updated parameters
     products[product] = result
     if repeat == "n":
         break
