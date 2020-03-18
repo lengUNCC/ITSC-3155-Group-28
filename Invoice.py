@@ -36,6 +36,7 @@ class Invoice:
 
     def totalPurePrice(self, products):
         total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products) + self.totalTax(products)      #update line
+        total_pure_price = round(total_pure_price, 2)
         return total_pure_price
 
     def totalTax(self, products):
