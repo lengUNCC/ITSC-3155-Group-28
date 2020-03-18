@@ -3,11 +3,12 @@ class Invoice:
     def __init__(self):
         self.items = {}
 
-    def addProduct(self, qnt, price, discount, markup):         #update parameter list
+    def addProduct(self, qnt, price, discount, markup, tax):         #update parameter list
         self.items['qnt'] = qnt
         self.items['unit_price'] = price
         self.items['discount'] = discount
-        self.items['markup'] = markup           #add line
+        self.items['markup'] = markup
+        self.items['tax'] = tax
         return self.items
 
     def totalImpurePrice(self, products):
@@ -33,8 +34,16 @@ class Invoice:
         self.total_markup = total_markup
         return total_markup
 
+    def totalTax(self, products):
+        total_tax = 0
+        for k, v in products.items():
+            total_tax += (self.totalImpurePrice(products) - self.totalDiscount(products)) * float(v['tax']) / 100
+        total_tax = round(total_tax, 2)
+        self.total_tax = total_tax
+        return total_tax
+
     def totalPurePrice(self, products):
-        total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products)      #update line
+        total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products) - self.totalTax(products)      #update line
         total_pure_price = round(total_pure_price, 2)
         return total_pure_price
 
