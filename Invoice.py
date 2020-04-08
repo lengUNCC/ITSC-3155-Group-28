@@ -43,7 +43,7 @@ class Invoice:
         return total_tax
 
     def totalPurePrice(self, products):
-        total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products) - self.totalTax(products)      #update line
+        total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products) + self.totalTax(products)      #update line
         total_pure_price = round(total_pure_price, 2)
         return total_pure_price
 
@@ -52,7 +52,11 @@ class Invoice:
             userInput = input(input_value)
             if userInput in['v', 'n']:
                 return userInput
-            print("y or n! Try again.")
+            elif userInput in['v', 'y']:
+                break
+            else:
+                print("Invalid answer! Please enter y or n.")
+
 
     def inputNumber(self, input_value):
         while True:
