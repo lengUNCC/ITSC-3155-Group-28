@@ -3,7 +3,7 @@ class Invoice:
     def __init__(self):
         self.items = {}
 
-    def addProduct(self, qnt, price, discount, markup, tax):         #update parameter list
+    def addProduct(self, qnt, price, discount, markup, tax):   #update parameter list
         self.items['qnt'] = qnt
         self.items['unit_price'] = price
         self.items['discount'] = discount
@@ -43,9 +43,17 @@ class Invoice:
         return total_tax
 
     def totalPurePrice(self, products):
-        total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products) + self.totalMarkup(products) + self.totalTax(products)      #update line
+        total_pure_price = self.totalImpurePrice(products) - (self.totalDiscount(products) + self.totalMarkup(products) + self.totalTax(products))     #update line
         total_pure_price = round(total_pure_price, 2)
         return total_pure_price
+
+    def updateCart(self, products, qntUpdate):
+        update_quantity = 0
+        for k, v in products.items():
+            update_quantity = int(v['qnt'])
+            update_quantity += qntUpdate
+            return update_quantity
+
 
     def inputAnswer(selfself, input_value):
         while True:
@@ -57,6 +65,11 @@ class Invoice:
             else:
                 print("Invalid answer! Please enter y or n.")
 
+    def inputProduct(selfself, input_value):
+        while True:
+            userInput = input(input_value)
+            return userInput
+
 
     def inputNumber(self, input_value):
         while True:
@@ -67,3 +80,4 @@ class Invoice:
                 continue
             else:
                 return userInput
+
