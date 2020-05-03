@@ -3,13 +3,19 @@ class Invoice:
     def __init__(self):
         self.items = {}
 
-    def addProduct(self, qnt, price, discount, markup, tax):         #update parameter list
+    def addProduct(self, name, qnt, price, discount, markup, tax):         #update parameter list
+        self.items['name'] = name
         self.items['qnt'] = qnt
         self.items['unit_price'] = price
         self.items['discount'] = discount
         self.items['markup'] = markup
         self.items['tax'] = tax
         return self.items
+
+    def productName(self, input_name):
+        userInput = input(input_name)
+        name = userInput
+        return name
 
     def totalImpurePrice(self, products):
         total_impure_price = 0
@@ -47,15 +53,22 @@ class Invoice:
         total_pure_price = round(total_pure_price, 2)
         return total_pure_price
 
-    def inputAnswer(selfself, input_value):
+    def displayProduct(self, products):
+        print("Name: ", self.productName(products))
+
+
+
+    def inputAnswer(self, input_answer):
         while True:
-            userInput = input(input_value)
-            if userInput in['v', 'n']:
+            userInput = input(input_answer)
+            if userInput in['v', 'e']:
                 return userInput
-            elif userInput in['v', 'y']:
+            elif userInput in['v', 'a']:
                 break
+            elif userInput in ['v', 'g']:
+                return userInput
             else:
-                print("Invalid answer! Please enter y or n.")
+                print("Invalid answer! Please enter e, a or g.")
 
 
     def inputNumber(self, input_value):
@@ -67,3 +80,4 @@ class Invoice:
                 continue
             else:
                 return userInput
+
